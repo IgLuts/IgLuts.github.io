@@ -1,0 +1,570 @@
+
+html{
+  font-size: 16px;
+}
+
+
+body {
+  margin: 0 auto;
+  background-image: url(../images/fon111.jpg);
+}
+
+header{                                               /*Тут все из хедера*/
+  background-image: url(../images/fonHeader1.jpg);
+  -webkit-background-size: cover;
+  background-size: 100%;
+  color: white;
+  background-attachment: fixed;
+}
+
+.social{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(3, 3, 2, 0.4);
+}
+
+.social1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1;
+}
+
+.social1 div{
+  padding: 0.25em;
+}
+
+
+.social1>:hover{
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.address{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1;
+  font-size: 1.5em;
+}
+
+.address img{
+  margin-top: 1.15em;
+  margin-right: 0.5em;
+}
+
+
+.phone{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+.phone img{
+   margin-top: 0.6em;
+   margin-right: 0.5em;
+}
+
+
+.vikingandmenu{
+  display: flex;
+  flex-direction: row;
+  border-top: solid rgba(230, 232, 250, 0.7) 5px;
+  border-bottom: solid rgba(230, 232, 250, 0.7) 5px;
+  background-color: rgba(3, 3, 2, 0.4);
+}
+
+.viking {
+  display: flex;
+  flex: 1;                                  
+  justify-content: center;
+  margin-top: 1em;                    
+  margin-bottom: 1em;             
+}
+
+.menu{
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  padding-right: 1em;
+}
+
+
+.nav{
+ display: flex;
+ flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+
+
+.nav p:first-child{
+  font-size: 3em;
+  color: rgba(215, 188, 115, 1);
+  margin-bottom: 0;
+  margin-top: -1em;
+  display: inline-block; /*тут начинается код для подчеркивания border-bottom меню*/
+  position: relative;
+  text-decoration: none;
+}
+
+.nav p:first-child:after {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    background: #ec4444;
+    transition: width 0.3s ease-in-out;
+    right: 0;
+    bottom: 0;
+}
+
+.nav p:first-child:hover:after {
+  width: 100%;
+  border-bottom: solid red 2px;
+}                         /*тут заканчивается код для подчеркивания border-bottom меню*/
+
+
+.nav p:first-child:hover{
+text-shadow: 1px 1px 2px orange, 
+             0.2em 0.2em 1em red; 
+}
+
+.nav p:nth-child(n+2){
+  margin-top: 0em;
+  margin-bottom: 0em;
+  display: none;
+  font-size: 2em;
+}
+
+.nav p:nth-child(n+2):hover{
+  color: yellow;
+  border: solid red 2px;
+  border-radius: 50%;
+  background-color: rgba(18, 17, 17, 0.5);
+  text-shadow: 1px 1px 2px orange,
+  1px 1px 3px red,
+  3px 3px 5px red;
+}
+
+.nav a{
+  text-decoration: none;
+  color: white;
+}
+
+.nav a:hover{
+  color: yellow;
+}
+
+                   /*Тут все для ромбов с эффектом проявления*/
+.bolshaya-oblogka{
+   display: flex;
+   flex-direction: row;
+   margin-top: 5%;
+}
+
+
+.obshiy_right{
+  width: 604px;
+  height: 604px;
+  opacity: 0.8;
+  flex:1;
+}
+
+.obshiy_left{
+  width: 604px;
+  height: 604px;
+  opacity: 0.8;
+  flex:1;
+}
+
+.obshiy_right .img{/*тут фон для большого правого ромба - именно 600*600 пикселей*/
+  background-image: url(../images/boroda5.jpg);
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  position: relative;
+}
+
+
+.obshiy_left .img{/*тут фон для большого левого ромба - именно 600*600 пикселей*/
+  background-image: url(../images/boroda6.jpg);
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  position: relative;
+}
+
+.top{
+background-position:  top;
+transform: translateX(0.5%) translateY(0%);
+left: 27.5%;
+}
+
+.right{ /*это второй ромб с текстом и изображением в нем*/
+background-position: right ;
+top: 25%; /*тут выравниваем положение каждого ромба задавая каждому нужное место*/
+right: -5%; /*продолжение - чобы картинка сошлась*/
+transform: translateX(1%) translateY(0.5%);  /*это для доводки и дополнит. выравнивания*/
+}
+
+.left{
+background-position: left;
+top: -25%;
+left: 5%;
+transform: translateX(-0.5%) translateY(0%);
+}
+
+.bottom{
+background-position: bottom;
+top: 0%;
+right: 17.5%;
+transform: translateX(0%) translateY(0.5%);
+}
+
+/*тут выравнивание теста в маленьких ромбах большого правого ромба начало*/
+.obshiy_right .first{
+  position: absolute;
+  left: 37%;
+  top: 40%;
+}
+
+.obshiy_right .second{
+  position: absolute;
+  left: 33%;
+  top: 40%;
+}
+
+.obshiy_right .therd{
+  position: absolute;
+ left: 35%;
+ top: 40%;
+}
+
+.obshiy_right .fourth{
+  position: absolute;
+  left: 35%;
+  top: 40%;
+}
+
+/*тут выравнивание текста в маленьких ромбах большого правого ромба конец*/
+
+
+.wrap:hover{
+transition: all 0.4s ease-in; /*время исчезновения фона ромба*/
+  background: none;
+}
+
+
+.wrap a{
+  color: white;
+  text-decoration: none;
+}
+
+.wrap a:hover{
+  color: yellow;
+  background-color: black;
+  border-bottom: solid white 5px;
+}
+
+
+.wrap{
+  background-color: rgba(3, 3, 2, 1); /*задан цвет для большого ромба*/
+  position: absolute;
+  color: white;
+  font-size: 2em;
+  width: 100%;
+  height: 100%;
+  transition: all 2.5s linear; /*время исчезновения фона ромба*/
+}
+
+
+.first{
+  position: absolute;
+  left: 33%;
+  top: 40%;
+}
+
+.second{
+  position: absolute;
+  left: 35%;
+  top: 40%;
+}
+
+.therd{
+  position: absolute;
+ left: 30%;
+ top: 40%;
+}
+
+.fourth{
+  position: absolute;
+  left: 25%;
+  top: 40%;
+}
+/*Тут заканчивается все для квадратных изображений с эффектом проявления*/
+
+/*стили для большого прямоугольника с затемняющейся фоткой при наведении -начало-*/
+.common-rectangle{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 5.5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  justify-content: center;
+  border: solid yellow 2px;
+  padding-bottom: 1em;
+  font-size: 1em;
+}
+
+.common-rectangle h1{ /*тут овал с our events*/
+  position: absolute;
+  margin-top: -0.75em;
+  padding-bottom: 0.3em;
+  color: orange;
+  padding-left: 2em;
+  padding-right: 2em;
+  background-image: url(../images/fon111.jpg);
+  background-size: cover;
+  border: solid yellow 2px;
+  border-radius: 50px;
+}
+
+.rectangle-container{
+ margin-left: 0.5em;
+ margin-right: 0.5em;
+ margin-top: 5em;
+ width: 600px;
+ height: 400px;
+ border: 2px solid yellow;
+ overflow: hidden;
+ text-align: center;
+ box-shadow: 2px 2px 3px black;
+ background-image: url(../images/fon11.jpg);
+ background-size: cover;
+}
+
+.rectangle-container:nth-child(2){
+  background-image: url(../images/boroda1.jpeg);
+}
+
+.rectangle-container:nth-child(3){
+  background-image: url(../images/boroda3.jpg);
+}
+
+.rectangle-container:nth-child(4){
+  background-image: url(../images/boroda4.jpg);
+}
+
+.rectangle-container:nth-child(5){
+  background-image: url(../images/boroda2.jpg);
+}
+
+.mask{
+ color: white;
+ overflow: hidden;   /*лечит просвет в верху*/
+ width: 600px;
+ height: 400px;
+ background-color: rgba(135, 144, 245, 0.5);
+ opacity:0;
+ transition: all 0.3s ease-in 0.4s;  /*время появления и исчезания фона маски*/
+}
+
+.mask:hover{
+ opacity:1;
+ transition-delay: 0s;
+}
+
+/*описание для заголовка в прямоугольнике с затемняющейся фоткой -начало-*/
+.mask h2{
+ font-size: 2em;
+ opacity:0;
+ border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+ margin: 3em 1em 0px 1em;
+ transform: scale(10); /*увеличение Н2 в 10раз*/
+ transition: all 0.3s ease-in-out 0.1s; /*все свойства элемента Н2. Нач.,конец аним медленн*/
+}
+
+.mask:hover h2{
+ opacity: 1;
+ transform: scale(1);  /*Н2 становится нормального размера*/
+ transition-delay: 0.1s; /*время ожидания перед началом перехода*/
+}
+/*описание для заголовка в прямоугольнике с затемняющейся фоткой -конец-*/
+
+.mask p{
+ margin-top: 0;
+ font-size: 2em;
+ opacity:0;
+ transform: scale(10);
+ transition: all 0.3s ease-in-out 0.2s;
+}
+
+.mask:hover p{
+ opacity:1;
+ transform: scale(1);
+ transition-delay: 0.2s;
+}
+
+.read-more{
+ display: inline-block; /*обязательно указать свойство дисплей иначе анимация неработает*/
+ text-decoration: none;
+ padding: 7px 14px;
+ background: #000;
+ text-transform: uppercase;
+ box-shadow: 0 0 1px #000
+}
+
+.read-more{ /*тут анимация для ссылки отдельным блоком*/
+ opacity:0;
+ transform: translateY(100px);
+ transition: all 0.3s ease-in-out 0.1s;
+}
+
+.mask:hover .read-more{
+ opacity:1;
+ transform: translateY(0px);
+ transition-delay: 0.3s;
+ color: white;
+}
+
+.read-more:hover{
+  background-color: orange;
+}
+
+/*стили для большого прямоугольника с затемняющейся фоткой -конец-*/
+
+/*тут слайдер начинается*/
+
+#block-for-slider {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#viewport {
+  border: solid yellow 3px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+
+#slidewrapper {
+    position: relative;
+    width: calc(100% * 4);
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    -webkit-transition-timing-function: cubic-bezier(.67,.01,.23,1);
+    -o-transition-timing-function: cubic-bezier(.67,.01,.23,1);
+    transition-timing-function: cubic-bezier(.67,.01,.23,1);
+}
+
+#slidewrapper, #slidewrapper ul, #slidewrapper li {
+    margin: 0;
+    padding: 0;
+}
+
+.slide {
+    width: calc(100%/4);
+    list-style: none;
+    display: inline;
+    float: left;
+}
+
+.slide-img {
+    width: 100%;
+}
+
+#prev-btn, #next-btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    top: calc(50% - 25px);
+    border: solid black 2px;
+}
+
+#prev-btn:hover, #next-btn:hover {
+    cursor: pointer;
+}
+
+#prev-btn {
+    left: 20px;
+}
+
+#next-btn {
+    right: 20px;
+}
+
+#nav-btns {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.slide-nav-btn {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+      border: solid black 2px;  
+    border-radius: 50%;
+    margin: 3px;
+}
+
+.slide-nav-btn:hover {
+    cursor: pointer;
+}
+
+/*тут слайдер заканчивается*/
+
+
+footer{
+  display: flex;
+  flex-direction: row;
+  border-top: solid yellow 5px;
+  color:white;
+  background-image: url(../images/fon3.png);
+}
+
+footer p:nth-child(1){
+  flex:1;
+  margin-left: 1%;
+}
+
+footer p:nth-child(2){
+  flex:1;
+  text-align: right;
+  margin-right: 1%;
+}
+
+
+
+
+
+
+
+
+
