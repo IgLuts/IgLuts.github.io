@@ -87,6 +87,20 @@ header{                                               /*Тут все из хе�
   margin-bottom: 1em;             
 }
 
+/*стили для новогодних приколов начало - можно удалять*/
+.meshok{
+  position: absolute;
+  left: 29.3vw;
+  top: 1vh;
+  width: 6em;
+  height: 7em;
+  background-image: url(../images/meshok.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/*стили для новогодних приколов конец  - можно удалять*/
+
 .menu{
   flex: 2;
   display: flex;
